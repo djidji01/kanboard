@@ -14,7 +14,7 @@
             <div class="table-list-row color-<?= $task['color_id'] ?>">
                 <?= $this->render('task_list/task_title', array(
                     'task' => $task,
-                    'show_items_selection' => true,
+                    'show_items_selection' => $this->projectRole->isDraggable($task)?true:null,
                     'redirect' => 'list',
                 )) ?>
 

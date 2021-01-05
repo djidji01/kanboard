@@ -1,5 +1,6 @@
 *.sqlite
 *.sqlite-journal
+vendor
 .buildpath
 .project
 /.settings/
@@ -22,3 +23,4 @@ data/config.php
 /config.php
 !docker/var/wwww/app/config.php
 node_modules
+/assets/vendor

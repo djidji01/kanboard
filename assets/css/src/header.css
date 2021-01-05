@@ -59,7 +59,7 @@ header h1 .tooltip {
 }
 
 a i.web-notification-icon {
-    color: var(--link-color-primary);
+    color: var(--link-color-danger);
 }
 
 a i.web-notification-icon:focus,

@@ -52,7 +52,7 @@ class InviteModel extends Base
         $this->emailClient->send(
             $values['email'],
             $values['email'],
-            e('Kanboard Invitation'),
+            e('Invitation to CHUB Lab IP management system'),
             $this->template->render('user_invite/email', array('token' => $values['token']))
         );
     }

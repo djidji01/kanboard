@@ -205,7 +205,7 @@ class ProjectRoleHelper extends Base
     {
         $role = $this->getProjectUserRole($task['project_id']);
 
-        if ($this->role->isCustomProjectRole($role) && $task['owner_id'] != $this->userSession->getId() && $this->hasRestriction($task['project_id'], $role, ProjectRoleRestrictionModel::RULE_TASK_UPDATE_ASSIGNED)) {
+        if ($this->role->isCustomProjectRole($role)&&($this->hasRestriction($task['project_id'], $role, ProjectRoleRestrictionModel::RULE_TASK_UPDATE)||($task['owner_id'] != $this->userSession->getId() && $this->hasRestriction($task['project_id'], $role, ProjectRoleRestrictionModel::RULE_TASK_UPDATE_ASSIGNED)))) {
             return false;
         }
 

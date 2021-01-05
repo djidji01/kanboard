@@ -12,10 +12,10 @@
         <?= $this->form->csrf() ?>
 
         <?= $this->form->label(t('Username'), 'username') ?>
-        <?= $this->form->text('username', $values, $errors, array('autofocus', 'required', 'autocomplete="username"')) ?>
+        <?= $this->form->text('username', $values, $errors, array('autofocus', 'required')) ?>
 
         <?= $this->form->label(t('Password'), 'password') ?>
-        <?= $this->form->password('password', $values, $errors, array('required', 'autocomplete="current-password"')) ?>
+        <?= $this->form->password('password', $values, $errors, array('required')) ?>
 
         <?php if (isset($captcha) && $captcha): ?>
             <?= $this->form->label(t('Enter the text below'), 'captcha') ?>
@@ -24,7 +24,7 @@
         <?php endif ?>
 
         <?php if (REMEMBER_ME_AUTH): ?>
-            <?= $this->form->checkbox('remember_me', t('Remember Me'), 1, true) ?><br>
+            <?= $this->form->checkbox('remember_me', t('Remember me'), 0, false) ?><br>
         <?php endif ?>
 
         <div class="form-actions">

@@ -71,7 +71,7 @@ class Client extends Base
         $author = 'Kanboard';
 
         if ($this->userSession->isLogged()) {
-            $author = e('%s via Kanboard', $this->helper->user->getFullname());
+            $author = e('%s via CHUB_LAB IP Manager', $this->helper->user->getFullname());
         }
 
         return $author;

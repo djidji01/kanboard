@@ -2,6 +2,8 @@
 
 namespace Kanboard\Controller;
 
+use Kanboard\Core\Controller\AccessForbiddenException;
+
 class TaskBulkChangePropertyController extends BaseController
 {
     public function show(array $values = [], array $errors = [])

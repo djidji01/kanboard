@@ -2,6 +2,8 @@
 
 namespace Kanboard\Controller;
 
+use Kanboard\Model\UserMetadataModel;
+
 /**
  * Board Tooltip
  *
